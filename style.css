@@ -1,0 +1,70 @@
+
+body {
+    align-items: center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: inherit;
+    font-family: "Poppins", Sans-serif;
+}
+#Logo{
+  width: 70px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 18px;
+}
+.contenedor{
+    align-items: center;
+    background-image: url("img/Folleto\ .png") ;
+    background-size: 100% 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Calculate{
+  background: rgba(255, 255, 255, 0.733);
+  width: 30%;
+  max-width: 400px;
+  min-width: 260px;
+  right: 50%;
+  margin: 10px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 7px 13px 37px rgb(19, 22, 172);
+  }
+.formu{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font: optional;
+}  
+.form-select{
+  width: 40%;
+  height: 20%;
+  min-width: 50px;
+}
+.form-control{
+  width: 40%;
+  min-width: 50px;
+}
+button{
+  margin-bottom: 15px;
+}
+footer{
+  opacity: 0.8;
+  right: 5%;
+  background-color: rgba(46, 46, 46, 0.671);
+  height: 20%;
+}
+.mb-4{
+  margin: 2px;
+}
+p.pesado {font-weight: bolder;}
+@media (max-width: 600px) {
+  .contenedor{
+    
+    background-image: linear-gradient(to top right, rgb(66, 26, 243), rgb(111, 255, 92)) ;
+  }
+  #Logo{
+    align-content: center;
+  }
+  
+}

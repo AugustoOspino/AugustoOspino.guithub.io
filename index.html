@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximun.scale=1.0,minimun-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penthouse – Profesionales de la Limpieza</title>
+    <link rel="apple-touch-icon" sizes="180x90" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="40x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="30x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="bootstrap.min.css" rel="stylesheet" >
+    <link href="iconds.css" rel="stylesheet" >
+    <script src="bootstrap.bundle.min.js" ></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+   <div class="contenedor">
+    <nav class="navbar navbar-expand-lg" style="background:rgba(74, 77, 76, 0.473) ;">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar" id="navba">
+        <a class="logo" href="https://pent-house.co"><img id="Logo" src="img/logo-pent-house.png" alt="logo-pent-house" ></a>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="Calculate">
+        <div class="formu">
+
+          <center>
+            <form>
+              <fieldset >
+                <legend>Calcula el valor de tu tarifa de limpieza</legend>
+                <div class="mb-3">
+                  <label for="disabledTextInput" class="form-label">Tamaño(m2)</label>
+                  <input type="number" id="disabledTextInput" class="form-control" >
+                </div>
+                <div class="mb-3">
+                  <label for="">Tipo</label>
+                  <select id="TIPE" type="number" class="form-select" aria-label="Default select example">
+                    <option selected>seleccionar</option>
+                    <option value="1">Oficina</option>
+                    <option value="2">Residencial</option>
+                  </select>
+                  <label for="">Frecuencia semanal</label>
+                  <select id="FS" class="form-select" aria-label="Default select example">
+                    <option selected>seleccionar</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="6">Ocasional</option>
+                    <option value="7">Express</option>
+                  </select>
+                  
+                </div>
+                
+                  <button type="button" class="btn btn-outline-success" onclick="calcular()">Calcular</button>
+                  
+                  <br>
+                  <p id="result"></p>
+                  <br>
+                  <p id="result1"></p>
+
+              </fieldset>
+            </form>
+          </center>
+
+        </div>
+        
+  
+      </div>
+      
+     </header>
+     <nav>
+  
+     </nav>
+     <!-- Footer -->
+<footer  class="text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Whatsapp -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://api.whatsapp.com/send/?phone=573113236193&text=Hola+%2APenthouse%2A.+Necesito+más+información+sobre+Oficinas+https%3A%2F%2Fpent-house.co%2Foficinas&type=phone_number&app_absent=0" target="_blank" role="button"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/penthouse.pl/" target="_blank" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p class="textofooter">
+        PROFESIONALES DE LA LIMPIEZA.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+  </div>
+  <!-- Grid container -->
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Todos los derechos reservados Pent-house SAS.
+    
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+   </div>
+  <script src="funtions.js"></script> 
+</body>
+</html>
