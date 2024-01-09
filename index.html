@@ -17,57 +17,70 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-<body>
-   <div class="contenedor">
-    <nav class="navbar navbar-expand-lg" style="background:rgba(74, 77, 76, 0.473) ;">
+<body style="height: 100vh;">
+   <div class="contenedor d-flex flex-column justify-content-space-between" style="height: 100%;width:100%;">
+    <nav class="navbar navbar-expand-lg"style="height:120px;width:100%;background:white">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar" id="navba">
-        <a class="logo" href="https://pent-house.co"><img id="Logo" src="img/logo-pent-house.png" alt="logo-pent-house" ></a>
+        <a class="logo" href="https://pent-house.com.co/"><img id="Logo" src="img/logo-pent-house.png" alt="logo-pent-house" ></a>
         </div>
       </div>
     </nav>
 
-    <header>
-      <div class="Calculate">
+    <header class="d-flex justify-content-center align-items-center" style="height: 100%;width:100%;color:#213E6E">
+      <div class="Calculate" >
         <div class="formu">
 
           <center>
             <form>
-              <fieldset >
-                <legend>Calcula el valor de tu tarifa de limpieza</legend>
-                <div class="mb-3">
-                  <label for="disabledTextInput" class="form-label">Tamaño(m2)</label>
-                  <input type="number" id="disabledTextInput" class="form-control" >
+              <fieldset style="background:white; padding:0px">
+                <h5>CALCULA EL VALOR DE TU TARIFA DE LIMPIEZA</h5>
+                <div class="mb-2">
+                  <label class="fz3" for="disabledTextInput" class="form-label">Tamaño(m2)</label>
+                  <input type="number" id="disabledTextInput"style="color:#213E6E" class="form-control" >
                 </div>
-                <div class="mb-3">
-                  <label for="">Tipo</label>
-                  <select id="TIPE" type="number" class="form-select" aria-label="Default select example">
+                <div class="mb-2">
+                  <label class="fz3" for="">Tipo</label>
+                  <select id="TIPE" type="number" class="form-select fz3" aria-label="Default select example" onchange="turistico(event),plan(event)">
                     <option selected>seleccionar</option>
                     <option value="1">Oficina</option>
                     <option value="2">Residencial</option>
+                    <option value="3">Turistico</option>
                   </select>
-                  <label for="">Frecuencia semanal</label>
-                  <select id="FS" class="form-select" aria-label="Default select example">
+                </div>
+                <div class="mb-2">
+                  <label class="fz3" for="">Plan</label>
+                  <select id="PLAN" type="number" class="form-select fz3" aria-label="Default select example" onchange="residencial(event)">
                     <option selected>seleccionar</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="5">5</option>
-                    <option value="6">Ocasional</option>
-                    <option value="7">Express</option>
+                    <option value="0">Sin Plan</option>
+                    <option value="1">Lite</option>
+                    <option value="2">Vip</option>
+                    <option value="3">Platino</option>
                   </select>
-                  
+                </div>
+                <div>
+                  <label class="fz3" for="">Frecuencia mensual</label>
+                  <select id="FS" class="form-select fz3" aria-label="Default select example">
+                    <option selected>seleccionar</option>
+                    <option value="1">4</option>
+                    <option value="2">5</option>
+                    <option value="3">6</option>
+                    <option value="5">7</option>
+                    <option value="6">8</option>
+                    <option value="7">9</option>
+                    <option value="8">10</option>
+                    <option value="9">Ocasional</option>
+                    <option value="10">Express</option>
+                  </select>
                 </div>
                 
-                  <button type="button" class="btn btn-outline-success" onclick="calcular()">Calcular</button>
+                  <button type="button" style="width: 90px;" class="btn-outline-green m-4 fz3" onclick="calcular()">Calcular</button>
                   
-                  <br>
-                  <p id="result"></p>
-                  <br>
-                  <p id="result1"></p>
+                  <p class="fz2" id="result">El valor estimado de una intervención de limpieza es:<br>  <span style='background-color:yellow ;'>$ 0</span></p>
+                  <p class="fz2" id="result1">El valor estimado de su limpieza mensual es: <br> <span style='background-color:yellow ;'>$ 0</span></p>
 
               </fieldset>
             </form>
@@ -83,49 +96,55 @@
   
      </nav>
      <!-- Footer -->
-<footer  class="text-center text-white">
+<div  class="text-center text-white" style="height: 160px;width:100%;opacity:1;position:relative">
   <!-- Grid container -->
-  <div class="container p-4">
+  <div class="container footer" style="width:100%;">
     <!-- Section: Social media -->
-    <section class="mb-4">
+    <section class="py-2 d-flex justify-content-center">
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn-outline-green btn-floating m-1" style="width:40px" href="#!" role="button"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
       <!-- Whatsapp -->
-      <a class="btn btn-outline-light btn-floating m-1" href="https://api.whatsapp.com/send/?phone=573113236193&text=Hola+%2APenthouse%2A.+Necesito+más+información+sobre+Oficinas+https%3A%2F%2Fpent-house.co%2Foficinas&type=phone_number&app_absent=0" target="_blank" role="button"
+      <a class="btn-outline-green btn-floating m-1" style="width:40px" href="https://api.whatsapp.com/send/?phone=573113236193&text=Hola+%2APenthouse%2A.+Necesito+más+información+sobre+Oficinas+https%3A%2F%2Fpent-house.co%2Foficinas&type=phone_number&app_absent=0" target="_blank" role="button"
         ><i class="fab fa-whatsapp"></i
       ></a>
 
       <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn-outline-green btn-floating m-1" style="width:40px" href="#!" role="button"
         ><i class="fab fa-google"></i
       ></a>
 
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/penthouse.pl/" target="_blank" role="button"
+      <a class="btn-outline-green btn-floating m-1" style="width:40px" href="https://www.instagram.com/penthouse.pl/" target="_blank" role="button"
         ><i class="fab fa-instagram"></i
       ></a>
     </section>
     <!-- Section: Social media -->
     <!-- Section: Text -->
-    <section class="mb-4">
-      <p class="textofooter">
+    <section>
+      <p class="textofooter mb-0" style="color: #213E6E;">
         PROFESIONALES DE LA LIMPIEZA.
       </p>
     </section>
     <!-- Section: Text -->
+  <div class="text-center mb-2 mt-3" style="color: #213E6E;">
+    © Penthouse Service SAS.
+    
+  </div>
 
   </div>
   <!-- Grid container -->
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2022 Todos los derechos reservados Pent-house SAS.
-    
-  </div>
   <!-- Copyright -->
-</footer>
+<div style="position: relative; width:100%;bottom:50px;">
+  <div class="wave1"></div>
+  <div class="wave2"></div>
+  <div class="wave3"></div>
+</div>
+<div style="width: 100%;position:absolute;bottom:0px;background:white;height:60px"></div>
+</div>
 <!-- Footer -->
 
    </div>

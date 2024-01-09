@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,400&display=swap');
 body {
     align-items: center;
     background-size: 100% 100%;
@@ -6,7 +7,8 @@ body {
     height: auto;
     background-repeat: no-repeat;
     background-position: inherit;
-    font-family: "Poppins", Sans-serif;
+    font-family: "Poppins";
+
 }
 #Logo{
   width: 70px;
@@ -19,21 +21,21 @@ body {
     background-image: url("img/Folleto\ .png") ;
     background-size: 100% 100%;
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .Calculate{
   background: rgba(255, 255, 255, 0.733);
-  width: 30%;
-  max-width: 400px;
-  min-width: 260px;
+  width: 92%;
+  max-width: 370px;
   right: 50%;
   margin: 10px auto;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 7px 13px 37px rgb(19, 22, 172);
+  padding: 10px 10px 0px;
+  background-color: white;
   }
 .formu{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+    font-family: "Poppins";
   font: optional;
 }  
 .form-select{
@@ -47,6 +49,17 @@ body {
 }
 button{
   margin-bottom: 15px;
+}
+.fz1{
+  font-size: 10px;
+}
+.fz2{
+  font-size: 12px;
+  color:#213E6E;
+}
+.fz3{
+  font-size: 14px;
+  color:#213E6E;
 }
 footer{
   opacity: 0.8;
@@ -67,4 +80,62 @@ p.pesado {font-weight: bolder;}
     align-content: center;
   }
   
+}
+
+.footer{
+  z-index: 1000;
+  position: relative;
+}
+.wave1{
+  background-image: url(./wave.png);
+  width: 100%;
+  height: 100px;
+  background-size: 1000px 100px;
+  position: absolute;
+  bottom: 0px;
+  opacity: 0.85;
+}
+.wave2{
+  background-image: url(./wave.png);
+  width: 100%;
+  height: 100px;
+  background-size: 1000px 100px;
+  position: absolute;
+  bottom: 0px;
+  background-position-x: 400px;
+  opacity: 0.85;
+}
+.wave3{
+  background-image: url(./wave.png);
+  width: 100%;
+  height: 100px;
+  background-size: 1000px 100px;
+  position: absolute;
+  bottom: 0px;
+  background-position-x: 290px;
+  opacity: 0.85;
+}
+input,select{
+  width: 200px !important;
+}
+.btn-outline-green{
+  background-color: #89BA2A;
+  color:white;
+  border-radius: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .7s ease;
+  outline: none !important;
+  border:none;
+  text-decoration: none;
+}
+.btn-outline-green:hover{
+  background-color: #213E6E;
+  color:white;
+  transition: all .7s ease;
+  outline: none !important;
+  border:none;
+  text-decoration: none;
 }
