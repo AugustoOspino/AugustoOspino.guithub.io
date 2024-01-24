@@ -15,10 +15,7 @@ function calcular(){
       })
     //Validamos que el tamaño del inmueble sea valido
     if(tam>0){
-        // su el tamaño es menor a 40 lo subimos a 40 
-        if (tam < 40) {
-            tam = 40;
-        }
+        
         //calculamos segun tipo y cambiamos valores
         switch(tipo){
         
@@ -27,59 +24,96 @@ function calcular(){
                 break;
             case "1":
                 //cuando el inmueble es tipo oficina
+                
                 switch(rec){
                     default:
                     document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                     break;
                     case"1":
                     totalp = tam*984*1.1204;
+                    // el totalp no puede ser menor a 44000
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     mes=totalp*4;
                     document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                     break;
                     case"2":
                     totalp = tam*946*1.1204;
+                    // el totalp no puede ser menor a 44000 
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     mes=totalp*5;
                     document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                     break;
                     case"3":
                     totalp = tam*910*1.1204;
+                    // el totalp no puede ser menor a 44000
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     mes=totalp*6;
                     document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                     break;
                     case"5":
                     totalp = tam*875*1.1204;
+                    // el totalp no puede ser menor a 44000
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     mes=totalp*7;
                     document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                     break;
                     case"6":
                     totalp = tam*840*1.1204;
+                    // el totalp no puede ser menor a 44000
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     mes=totalp*8;
                     document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                     break;
                     case"7":
                     totalp = tam*808*1.1204;
+                    // el totalp no puede ser menor a 44000
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     mes=totalp*9;
                     document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                     break;
                     case"8":
                     totalp = tam*778*1.1204;
+                    // el totalp no puede ser menor a 44000
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     mes=totalp*10;
                     document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                     break;
                     case"9":
                     totalp = tam*1279*1.1204;
+                    // el totalp no puede ser menor a 44000
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     //mes=totalp*4.345;
                     document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );               break;
                     case"10":
                     totalp = tam*1378*1.1204;
+                    // el totalp no puede ser menor a 44000
+                    if (totalp < 44000) {
+                        totalp = 44000
+                    }
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     //mes=totalp*4.345;
                     document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
@@ -88,24 +122,35 @@ function calcular(){
                 break ;
             case"2":
                      //cuando el inmueble es tipo residencial 
+                     
+                     
                 if(tam >=40 && tam <=86){
                     switch(pla){
                         default:
                         document.getElementById("result").innerHTML = ("Debe selecionar el plan ");
                         break;
                         case "0":
+                            // residencial sin plan
                             switch(rec){
                                 default:
                                  document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"9":
-                                 totalp = tam*1550;
+                                 totalp = tam*1700;
+                                 //  si totalp es menor a 60000 deben subirse a 60000
+                                 if (totalp < 60000) {
+                                   totalp = 60000;
+                                 }
                                  document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                   //mes=totalp*4.345;
                                 document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
                                 break;
                                 case"10":
-                                 totalp = tam*1673;
+                                 totalp = tam*1830;
+                                 //  si totalp es menor a 60000 deben subirse a 60000
+                                 if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                  document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                  //mes=totalp*4.345;
                                  document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
@@ -117,48 +162,78 @@ function calcular(){
                         break;
           
                         case "1":
+                            //Residencial Lite
+                    
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1195;
+                                totalp = tam*1195*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1147;
+                                totalp = tam*1147*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*1101;
+                                totalp = tam*1101*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*1057;
+                                totalp = tam*1057*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*1015;
+                                totalp = tam*1015*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*974;
+                                totalp = tam*974*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*935;
+                                totalp = tam*935*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -167,48 +242,77 @@ function calcular(){
                              }
                         break ;
                         case "2":
+                            //Residencial vip
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1445;
+                                totalp = tam*1445*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1387;
+                                totalp = tam*1387*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*1332;
+                                totalp = tam*1332*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*1278;
+                                totalp = tam*1278*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*1227;
+                                totalp = tam*1227*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*1178;
+                                totalp = tam*1178*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*1131;
+                                totalp = tam*1131*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -217,48 +321,77 @@ function calcular(){
                              }
                         break
                         case "3":
+                            //Residencial Platino 
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1793;
+                                totalp = tam*1793*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1721;
+                                totalp = tam*1721*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*1652;
+                                totalp = tam*1652*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*1586;
+                                totalp = tam*1586*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*1523;
+                                totalp = tam*1523*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*1462;
+                                totalp = tam*1462*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*1403;
+                                totalp = tam*1403*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -279,13 +412,21 @@ function calcular(){
                                  document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"9":
-                                 totalp = tam*1550*1.1204;
+                                 totalp = tam*1550*1.0987;
+                                 //  si totalp es menor a 60000 deben subirse a 60000
+                                 if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                  document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                   //mes=totalp*4.345;
                                 document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
                                 break;
                                 case"10":
-                                 totalp = tam*1673*1.1204;
+                                 totalp = tam*1673*1.0987;
+                                 //  si totalp es menor a 60000 deben subirse a 60000
+                                 if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                  document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                  //mes=totalp*4.345;
                                  document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
@@ -297,48 +438,77 @@ function calcular(){
                         break;
           
                         case "1":
+                            //lite
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1147*1.1204;
+                                totalp = tam*1147*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1101*1.1204;
+                                totalp = tam*1101*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*1057*1.1204;
+                                totalp = tam*1057*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*1015*1.1204;
+                                totalp = tam*1015*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*974*1.1204;
+                                totalp = tam*974*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*935*1.1204;
+                                totalp = tam*935*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*898*1.1204;
+                                totalp = tam*898*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -347,48 +517,77 @@ function calcular(){
                              }
                         break ;
                         case "2":
+                            //vip
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1387*1.1204;
+                                totalp = tam*1387*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1332*1.1204;
+                                totalp = tam*1332*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*1278*1.1204;
+                                totalp = tam*1278*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*1227*1.1204;
+                                totalp = tam*1227*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*1178*1.1204;
+                                totalp = tam*1178*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*1131*1.1204;
+                                totalp = tam*1131*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*1086*1.1204;
+                                totalp = tam*1086*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -397,48 +596,77 @@ function calcular(){
                              }
                         break
                         case "3":
+                            //platino
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1721*1.1204;
+                                totalp = tam*1721*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                  totalp = 70000;
+                                }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1652*1.1204;
+                                totalp = tam*1652*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*1586*1.1204;
+                                totalp = tam*1586*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*1523*1.1204;
+                                totalp = tam*1523*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*1462*1.1204;
+                                totalp = tam*1462*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*1403*1.1204;
+                                totalp = tam*1403*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*1347*1.1204;
+                                totalp = tam*1347*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -459,13 +687,21 @@ function calcular(){
                                  document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"9":
-                                 totalp = tam*1550*1.1204;
+                                 totalp = tam*1550*1.0987;
+                                 //  si totalp es menor a 60000 deben subirse a 60000
+                                 if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                  document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                   //mes=totalp*4.345;
                                 document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
                                 break;
                                 case"10":
-                                 totalp = tam*1673*1.1204;
+                                 totalp = tam*1673*1.0987;
+                                 //  si totalp es menor a 60000 deben subirse a 60000
+                                 if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                  document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                  //mes=totalp*4.345;
                                  document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
@@ -477,48 +713,77 @@ function calcular(){
                         break;
           
                         case "1":
+                            //lite
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1057*1.1204;
+                                totalp = tam*1057*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1015*1.1204;
+                                totalp = tam*1015*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*974*1.1204;
+                                totalp = tam*974*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*935*1.1204;
+                                totalp = tam*935*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*898*1.1204;
+                                totalp = tam*898*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*862*1.1204;
+                                totalp = tam*862*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*828*1.1204;
+                                totalp = tam*828*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 60000) {
+                                    totalp = 60000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -527,48 +792,77 @@ function calcular(){
                              }
                         break ;
                         case "2":
+                            //vip
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1278*1.1204;
+                                totalp = tam*1278*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1227*1.1204;
+                                totalp = tam*1227*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*1178*1.1204;
+                                totalp = tam*1178*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*1131*1.1204;
+                                totalp = tam*1131*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*1086*1.1204;
+                                totalp = tam*1086*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*1042*1.1204;
+                                totalp = tam*1042*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*1001*1.1204;
+                                totalp = tam*1001*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 65000) {
+                                    totalp = 65000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -577,48 +871,77 @@ function calcular(){
                              }
                         break
                         case "3":
+                            //plan platino
                             switch(rec){
                                 default:
                                 document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                                 break;
                                 case"1":
-                                totalp = tam*1585*1.1204;
+                                totalp = tam*1585*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*4;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"2":
-                                totalp = tam*1523*1.1204;
+                                totalp = tam*1523*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*5;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"3":
-                                totalp = tam*1462*1.1204;
+                                totalp = tam*1462*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*6;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"5":
-                                totalp = tam*1403*1.1204;
+                                totalp = tam*1403*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*7;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"6":
-                                totalp = tam*1347*1.1204;
+                                totalp = tam*1347*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*8;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"7":
-                                totalp = tam*1293*1.1204;
+                                totalp = tam*1293*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*9;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
                                 break;
                                 case"8":
-                                totalp = tam*1242*1.1204;
+                                totalp = tam*1242*1.0987;
+                                //  si totalp es menor a 60000 deben subirse a 60000
+                                if (totalp < 70000) {
+                                    totalp = 70000;
+                                  }
                                 document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                                 mes=totalp*10;
                                 document.getElementById("result1").innerHTML = ("El valor estimado de su limpieza mensual es:<br> <span style='background-color:yellow ;'>"+ formatterPeso.format(mes)+"</span >" );
@@ -634,18 +957,22 @@ function calcular(){
             break;
            case"3":
                 //cuando el inmueble es tipo turistico 
+                // el tam debe ser minimo 59 mts
+                if (tam < 59) {
+                    tam = 59;
+                }
                 switch(rec){
                     default:
                     document.getElementById("result").innerHTML = ("Debe seleccionar la recurrencia ");
                     break;
                     case"9":
-                    totalp = tam*850*1.1204;
+                    totalp = tam*950;
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                     //mes=totalp*4.345;
                     document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
                     break;
                     case"10":
-                    totalp = tam*1195*1.1204;
+                    totalp = tam*1330;
                     document.getElementById("result").innerHTML = ("El valor estimado de una intervención de limpieza es:<br> <span style='background-color:yellow ;'> "+ formatterPeso.format(totalp)+"</span >" );
                    //mes=totalp*4.345;
                     document.getElementById("result1").innerHTML = ("Este servicio no puede ser ofertado mensualmente" );
